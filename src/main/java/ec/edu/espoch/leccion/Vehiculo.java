@@ -38,7 +38,7 @@ public class Vehiculo {
     }
 
     public void usarBateria(int consumo) {
-        batteryL -= consumo;
+        batteryL =batteryL- consumo;
         if (batteryL < 0) {
             batteryL = 0;
         }
