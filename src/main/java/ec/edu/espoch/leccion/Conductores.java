@@ -4,21 +4,19 @@
  */
 package ec.edu.espoch.leccion;
 
-import java.util.Scanner;
 
 /**
  *
  * @author AKRU
  */
 public class Conductores {
-
-    public String firstName;
+ 
+ public String firstName;
     public String lastName;
     public int id;
     public int licenseNumber;
     public int yearExperience;
-    public int NumEntregas = 0;
-    
+    public int numEntregas = 0;
 
     public Conductores() {
     }
@@ -32,17 +30,19 @@ public class Conductores {
     }
 
     public void imprimir() {
-        System.out.println("El nombre del conductor es " + firstName);
-        System.out.println("El apellido del conductor es " + lastName);
-        System.out.println("El codigo unico es :" + id);
-        System.out.println("El numero de la licencia :" + licenseNumber);
-        System.out.println("Los años de experiencia es " + yearExperience);
-
+        System.out.println("Nombre: " + firstName);
+        System.out.println("Apellido: " + lastName);
+        System.out.println("ID: " + id);
+        System.out.println("Licencia: " + licenseNumber);
+        System.out.println("Anos de experiencia: " + yearExperience);
+        System.out.println("Entregas realizadas: " + numEntregas);
+    }
+    public void registrarEntrega(int cantidad) {
+        numEntregas = numEntregas+ cantidad;
     }
 
-    public int cacularEntregas() {
-      
-        
-        return 0;
+    public int calcularEntregas() {
+        return numEntregas;
     }
 }
+   
